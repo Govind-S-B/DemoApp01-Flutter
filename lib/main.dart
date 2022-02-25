@@ -14,18 +14,18 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.purple[300],
       ),
       body: Center(
-        child: RaisedButton(
-          onPressed: (){
-            print("uwu");
-          },
-          color: Colors.lightBlue,
-          child: Text("owo"),
-
-        )
+        child: RaisedButton.icon(
+            onPressed: () {print("wow");},
+            icon: Icon(
+            Icons.mail_outline
+            ),
+            label: Text("Maileu me"),
+            color : Colors.amber,
+        ),
         ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        child: Text("0.0"),
+        child: Text(">.0"),
         backgroundColor: Colors.purple[300],
       ),
     );
