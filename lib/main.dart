@@ -14,14 +14,12 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.purple[300],
       ),
       body: Center(
-        child: RaisedButton.icon(
-            onPressed: () {print("wow");},
-            icon: Icon(
-            Icons.mail_outline
-            ),
-            label: Text("Maileu me"),
-            color : Colors.amber,
-        ),
+        child: IconButton(
+          onPressed: (){print("clickeu");},
+          icon: Icon(Icons.mail_rounded),
+          color: Colors.amber,
+          iconSize: 150.0 ,
+        )
         ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
