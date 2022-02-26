@@ -13,11 +13,22 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.purple[300],
       ),
-      body: Container(
-        color: Colors.grey[400],
-        padding: EdgeInsets.fromLTRB(10.0, 20.0, 30.0, 40.0),
-        margin: EdgeInsets.all(20),
-        child: Text("yohoo"),
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text("Morese Code .._.."),
+          Container(
+            padding: EdgeInsets.all(30),
+            color: Colors.deepPurpleAccent[200],
+            child: Text("Text box",style: TextStyle(color: Colors.white.withOpacity(0.6)),),
+          ),
+          RaisedButton(
+            onPressed: (){},
+            color: Colors.amber,
+            child: Text(">"),
+          )
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
