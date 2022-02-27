@@ -38,9 +38,9 @@ class Home extends StatelessWidget {
           scrollDirection: Axis.horizontal,
           child:Row(
             children: [
-              Image(image: NetworkImage("https://static01.nyt.com/images/2016/09/28/us/17xp-pepethefrog_web1/28xp-pepefrog-articleLarge.jpg?quality=75&auto=webp&disable=upscale")),
-              Image(image: NetworkImage("https://i.kym-cdn.com/photos/images/original/002/165/942/54f.png")),
-              Image(image: NetworkImage("https://i.guim.co.uk/img/media/327e46c3ab049358fad80575146be9e0e65686e7/0_56_1023_614/master/1023.jpg?width=465&quality=45&auto=format&fit=max&dpr=2&s=e63be0dd46326e8cd1bc22cfb65ceb0b")),
+              SizedBox( width: 300.0 ,child: Image(image: NetworkImage("https://static01.nyt.com/images/2016/09/28/us/17xp-pepethefrog_web1/28xp-pepefrog-articleLarge.jpg?quality=75&auto=webp&disable=upscale"))),
+              SizedBox( width: 300.0 ,child: Image(image: NetworkImage("https://i.kym-cdn.com/photos/images/original/002/165/942/54f.png"))),
+              SizedBox( width: 300.0 ,child: Image(image: NetworkImage("https://i.guim.co.uk/img/media/327e46c3ab049358fad80575146be9e0e65686e7/0_56_1023_614/master/1023.jpg?width=465&quality=45&auto=format&fit=max&dpr=2&s=e63be0dd46326e8cd1bc22cfb65ceb0b"))),
             ],
           ),)
         ],
