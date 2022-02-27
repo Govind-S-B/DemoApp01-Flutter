@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:ui' as ui;
 
 void main() => runApp(MaterialApp(
   home: Home()
@@ -9,46 +10,100 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("AVDULLLL"),
+        title: Text(
+          'Coolors',
+          style: TextStyle(
+              fontSize: 40,
+              foreground: Paint()
+                ..shader = ui.Gradient.linear(
+                  const Offset(150, 30),
+                  const Offset(200, 20),
+                  <Color>[
+                    Colors.red,
+                    Colors.blue,
+                  ],
+                )
+          ),
+        ),
         centerTitle: true,
-        backgroundColor: Colors.purple[300],
+        backgroundColor: Colors.grey[300],
       ),
-      body: SingleChildScrollView(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
+      body: Column(
         children: [
-          Container(
-            color: Colors.yellow,
-            padding: EdgeInsets.all(15),
-            child: Text("YESU"),
+          Expanded(
+            flex: 2,
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Expanded(
+                  flex: 3,
+                  child: Container(
+                    color: Color(0xFFEF233C),
+                    child: Text("WE",style: TextStyle(color: Colors.white),),
+                    padding: EdgeInsets.all(30),
+                  ),
+                ),
+                Expanded(
+                  flex: 2,
+                  child: Container(
+                    color: Color(0xffd7e3fc),
+                    child: Text("R",style: TextStyle(color: Colors.black),),
+                    padding: EdgeInsets.all(30),
+                  ),
+                ),
+                Expanded(
+                  flex: 1,
+                  child: Container(
+                    color: Color(0xff3a0ca3),
+                    child: Text("1",style: TextStyle(color: Colors.white),),
+                    padding: EdgeInsets.all(30),
+                  ),
+                ),
+              ],
+            ),
           ),
-          Container(
-            color: Colors.green,
-            padding: EdgeInsets.all(30),
-            child: Text("AI"),
-          ),
-          Container(
-            color: Colors.red,
-            padding: EdgeInsets.all(60),
-            child: Text("AM"),
-          ),
-          Image(image : NetworkImage("https://i.kym-cdn.com/entries/icons/facebook/000/038/086/static-assets-upload7639484684924230402.jpg")),
-        SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-          child:Row(
-            children: [
-              SizedBox( width: 300.0 ,child: Image(image: NetworkImage("https://static01.nyt.com/images/2016/09/28/us/17xp-pepethefrog_web1/28xp-pepefrog-articleLarge.jpg?quality=75&auto=webp&disable=upscale"))),
-              SizedBox( width: 300.0 ,child: Image(image: NetworkImage("https://i.kym-cdn.com/photos/images/original/002/165/942/54f.png"))),
-              SizedBox( width: 300.0 ,child: Image(image: NetworkImage("https://i.guim.co.uk/img/media/327e46c3ab049358fad80575146be9e0e65686e7/0_56_1023_614/master/1023.jpg?width=465&quality=45&auto=format&fit=max&dpr=2&s=e63be0dd46326e8cd1bc22cfb65ceb0b"))),
-            ],
-          ),)
+          Expanded(
+            flex: 1,
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Container(
+                    color: Colors.cyan,
+                    padding: EdgeInsets.all(40.0),
+                  ),
+                  Container(
+                    color: Colors.greenAccent,
+                    padding: EdgeInsets.all(40.0),
+                  ),
+                  Container(
+                    color: Colors.brown,
+                    padding: EdgeInsets.all(40.0),
+                  ),
+                  Container(
+                    color: Colors.amber,
+                    padding: EdgeInsets.all(40.0),
+                  ),
+                  Container(
+                    color: Colors.deepOrangeAccent,
+                    padding: EdgeInsets.all(40.0),
+                  ),
+                  Container(
+                    color: Colors.pink,
+                    padding: EdgeInsets.all(40.0),
+                  ),
+                ],
+              ),
+            )
+          )
         ],
-      ),),
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         child: Text(">.0"),
-        backgroundColor: Colors.purple[300],
+        backgroundColor: Colors.indigoAccent
       ),
     );
   }
